@@ -3,6 +3,9 @@ package com.costa.design.model.strategy.duck;
 import com.costa.design.model.strategy.duck.behavior.FlyBehavior;
 import com.costa.design.model.strategy.duck.behavior.QuackBehavior;
 
+import java.util.concurrent.locks.AbstractQueuedSynchronizer;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+
 /**
  * 鸭子对象
  * 所有对象共有的行为，比如外观（鸭子的样子各有不同）、游泳（假设鸭子都会游泳，该行为的描述是一致的）
@@ -15,7 +18,6 @@ import com.costa.design.model.strategy.duck.behavior.QuackBehavior;
  * @date：Created in 2022/4/16 14:50
  */
 public abstract class Duck {
-
     private FlyBehavior flyBehavior;
     private QuackBehavior quackBehavior;
 
